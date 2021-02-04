@@ -1,5 +1,10 @@
 public class Server
 {
+    void connect(string ip)
+    {
+
+    }
+
     void main()
     {
         print("Enter ip address to connect to: ");
@@ -7,10 +12,5 @@ public class Server
 
         if(ip != null)
             connect(ip):
-    }
-
-    void connect(string ip)
-    {
-
     }
 }
