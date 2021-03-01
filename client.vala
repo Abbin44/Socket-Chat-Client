@@ -14,10 +14,16 @@ public class Client
     	ssize_t len;
       while(true)
       {
+        string result = "";
         while (socket.get_available_bytes() > 0)
         {
           len = socket.receive(buffer);
-          stdout.write(buffer, len);
+          for(int i = 0; i < buffer.length && buffer[i] != 0; i++) {
+                result += ((char)buffer[i]).to_string();
+          }
+        }
+        if (result != "") {
+          print(result);
           print("\n");
         }
       }
